@@ -1,7 +1,17 @@
 <%= render "layouts/errors", :object => @list %>
 
 <%= form_for @list do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
-<% end %>
+  <div class="control-group">
+    <%= f.label :name %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+
+    <%= f.submit class: "list btn btn-danger" %>
+
+  </div>
+
+  <% end %>
